@@ -1,0 +1,38 @@
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #connectButton {
+    background-color: #007bff;
+  }
+  
+  #mintButton {
+    background-color: #ffc107;
+    color: #212529;
+  }
+  
+  #mintButton:hover {
+    background-color: #e0a800;
+  }
+  

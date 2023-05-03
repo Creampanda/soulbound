@@ -1,16 +1,16 @@
 const { ethers, run, network } = require("hardhat");
 
 async function main() {
-  const SoulbondTokenFactory = await ethers.getContractFactory("SoulbondToken");
+  const SoulboundTokenFactory = await ethers.getContractFactory("SoulboundToken");
   console.log("Deploying contract...");
-  const contractName = "Soulbond";
-  const soulbondToken = await SoulbondTokenFactory.deploy(contractName);
-  await soulbondToken.deployed();
-  console.log(`Deployed contract to: ${soulbondToken.address}`);
-  console.log(network.config);
+  const contractName = "Soulbound";
+  const soulboundToken = await SoulboundTokenFactory.deploy(contractName);
+  await soulboundToken.deployed();
+  console.log(`Deployed contract to: ${soulboundToken.address}`);
+  // console.log(network.config);
   if (network.config.chainId === 11155111 && process.env.ETHERSCAN_API_KEY) {
-    await soulbondToken.deployTransaction.wait(6);
-    await verify(soulbondToken.address, [contractName]);
+    await soulboundToken.deployTransaction.wait(6);
+    await verify(soulboundToken.address, [contractName]);
   }
 }
 
